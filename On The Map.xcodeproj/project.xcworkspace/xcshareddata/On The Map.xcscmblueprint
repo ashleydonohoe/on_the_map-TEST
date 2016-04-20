@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3FDEA0DDAECC34C73A12B36C6AEC85DF7CC5782F",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "B471E318418E771E8EF1F5182AB4ED0CFA939EE2" : 0,
+    "3FDEA0DDAECC34C73A12B36C6AEC85DF7CC5782F" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FF9FF407-A74D-4B30-9871-81802FC2AFA0",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "B471E318418E771E8EF1F5182AB4ED0CFA939EE2" : "",
+    "3FDEA0DDAECC34C73A12B36C6AEC85DF7CC5782F" : "On%20The%20Map\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "On The Map",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "On The Map.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ashleydonohoe\/on_the_map.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3FDEA0DDAECC34C73A12B36C6AEC85DF7CC5782F"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ashleydonohoe\/iOSNetworkingCourse.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B471E318418E771E8EF1F5182AB4ED0CFA939EE2"
+    }
+  ]
+}

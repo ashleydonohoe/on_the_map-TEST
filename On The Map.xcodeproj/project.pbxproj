@@ -12,6 +12,7 @@
 		E022E6651CC83ECE002D962B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022E6631CC83ECE002D962B /* Main.storyboard */; };
 		E022E6671CC83ECE002D962B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E022E6661CC83ECE002D962B /* Assets.xcassets */; };
 		E022E66A1CC83ECE002D962B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022E6681CC83ECE002D962B /* LaunchScreen.storyboard */; };
+		E022E6771CC83FCA002D962B /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022E6761CC83FCA002D962B /* GCDBlackBox.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,9 +20,10 @@
 		E022E65F1CC83ECE002D962B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E022E6611CC83ECE002D962B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E022E6641CC83ECE002D962B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E022E6661CC83ECE002D962B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E022E6661CC83ECE002D962B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "On The Map/Assets.xcassets"; sourceTree = "<group>"; };
 		E022E6691CC83ECE002D962B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E022E66B1CC83ECE002D962B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E022E6761CC83FCA002D962B /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,56 @@
 		E022E65E1CC83ECE002D962B /* On The Map */ = {
 			isa = PBXGroup;
 			children = (
+				E022E6751CC83F7D002D962B /* Supporting Files */,
+				E022E6741CC83F6E002D962B /* Assets */,
+				E022E6731CC83F5D002D962B /* Controller */,
+				E022E6721CC83F58002D962B /* View */,
+				E022E6711CC83F50002D962B /* Model */,
 				E022E65F1CC83ECE002D962B /* AppDelegate.swift */,
+				E022E6761CC83FCA002D962B /* GCDBlackBox.swift */,
+			);
+			path = "On The Map";
+			sourceTree = "<group>";
+		};
+		E022E6711CC83F50002D962B /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				E022E6611CC83ECE002D962B /* ViewController.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		E022E6721CC83F58002D962B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		E022E6731CC83F5D002D962B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		E022E6741CC83F6E002D962B /* Assets */ = {
+			isa = PBXGroup;
+			children = (
 				E022E6631CC83ECE002D962B /* Main.storyboard */,
 				E022E6661CC83ECE002D962B /* Assets.xcassets */,
 				E022E6681CC83ECE002D962B /* LaunchScreen.storyboard */,
+			);
+			name = Assets;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		E022E6751CC83F7D002D962B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				E022E66B1CC83ECE002D962B /* Info.plist */,
 			);
-			path = "On The Map";
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E022E6621CC83ECE002D962B /* ViewController.swift in Sources */,
+				E022E6771CC83FCA002D962B /* GCDBlackBox.swift in Sources */,
 				E022E6601CC83ECE002D962B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +194,7 @@
 				E022E6641CC83ECE002D962B /* Base */,
 			);
 			name = Main.storyboard;
+			path = "On The Map";
 			sourceTree = "<group>";
 		};
 		E022E6681CC83ECE002D962B /* LaunchScreen.storyboard */ = {
@@ -157,6 +203,7 @@
 				E022E6691CC83ECE002D962B /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = "On The Map";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
