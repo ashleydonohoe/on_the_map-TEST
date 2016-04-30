@@ -13,6 +13,8 @@
 		E022E6671CC83ECE002D962B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E022E6661CC83ECE002D962B /* Assets.xcassets */; };
 		E022E66A1CC83ECE002D962B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E022E6681CC83ECE002D962B /* LaunchScreen.storyboard */; };
 		E022E6771CC83FCA002D962B /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022E6761CC83FCA002D962B /* GCDBlackBox.swift */; };
+		E04EA4191CD478EB00AA3746 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EA4181CD478EB00AA3746 /* UdacityClient.swift */; };
+		E04EA41B1CD4825800AA3746 /* UdacityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EA41A1CD4825800AA3746 /* UdacityConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E022E6691CC83ECE002D962B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E022E66B1CC83ECE002D962B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E022E6761CC83FCA002D962B /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
+		E04EA4181CD478EB00AA3746 /* UdacityClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
+		E04EA41A1CD4825800AA3746 /* UdacityConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 		E022E6711CC83F50002D962B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E04EA4171CD478C100AA3746 /* Clients */,
 				E022E6611CC83ECE002D962B /* ViewController.swift */,
 			);
 			name = Model;
@@ -106,6 +111,15 @@
 				E022E66B1CC83ECE002D962B /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E04EA4171CD478C100AA3746 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				E04EA4181CD478EB00AA3746 /* UdacityClient.swift */,
+				E04EA41A1CD4825800AA3746 /* UdacityConstants.swift */,
+			);
+			name = Clients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04EA4191CD478EB00AA3746 /* UdacityClient.swift in Sources */,
+				E04EA41B1CD4825800AA3746 /* UdacityConstants.swift in Sources */,
 				E022E6621CC83ECE002D962B /* ViewController.swift in Sources */,
 				E022E6771CC83FCA002D962B /* GCDBlackBox.swift in Sources */,
 				E022E6601CC83ECE002D962B /* AppDelegate.swift in Sources */,
@@ -335,6 +351,7 @@
 				E022E6701CC83ECE002D962B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
