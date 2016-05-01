@@ -13,26 +13,39 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var debugTextLabel: UILabel!
+    
+    @IBOutlet weak var loginButton: UIButton!
+    
+    var session: NSURLSession!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func loginPressed(sender: UIButton) {
+        UdacityClient.sharedInstance().loginWithUserCredentials(emailTextField.text!, password: passwordTextField.text!) { (success, errorString) in
+            performUIUpdatesOnMain {
+                if success != nil {
+                    self.completeLogin()
+                } else {
+                    self.displayError(errorString)
+                }
+            }
+        }    
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func completeLogin() {
+        print("Login completed")
     }
-    */
 
+}
+
+extension LoginViewController {
+    private func displayError(errorString: String?) {
+        if let errorString = errorString {
+            debugTextLabel.text = errorString
+        }
+    }
 }

@@ -50,7 +50,19 @@
                                     <constraint firstAttribute="width" constant="62" id="Dbr-be-Cde"/>
                                 </constraints>
                                 <state key="normal" title="Log in"/>
+                                <connections>
+                                    <action selector="loginPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fAZ-Jz-U6s"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvf-pb-5CO">
+                                <rect key="frame" x="20" y="302" width="560" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="xKa-73-NRP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.63642293214797974" green="0.7371363639831543" blue="0.92574089765548706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -59,7 +71,10 @@
                             <constraint firstItem="EmR-Ve-hC3" firstAttribute="baseline" secondItem="7KK-9r-Ext" secondAttribute="baseline" id="PHg-E9-tFV"/>
                             <constraint firstItem="7KK-9r-Ext" firstAttribute="leading" secondItem="EmR-Ve-hC3" secondAttribute="trailing" constant="15" id="R0F-bE-Bhd"/>
                             <constraint firstItem="gxO-B9-OMM" firstAttribute="top" secondItem="EmR-Ve-hC3" secondAttribute="bottom" constant="21" id="Uvz-yr-f32"/>
+                            <constraint firstItem="Tvf-pb-5CO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WVz-Oe-LDv"/>
+                            <constraint firstItem="Tvf-pb-5CO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X4h-Tu-Z92"/>
                             <constraint firstItem="EmR-Ve-hC3" firstAttribute="leading" secondItem="gxO-B9-OMM" secondAttribute="leading" id="eGg-Bx-e5c"/>
+                            <constraint firstItem="Tvf-pb-5CO" firstAttribute="top" secondItem="gxO-B9-OMM" secondAttribute="bottom" constant="35" id="h2N-5e-EFo"/>
                             <constraint firstItem="7KK-9r-Ext" firstAttribute="top" secondItem="4cU-1n-DMF" secondAttribute="bottom" constant="8" symbolic="YES" id="hlM-Kx-pmC"/>
                             <constraint firstItem="4cU-1n-DMF" firstAttribute="trailing" secondItem="7KK-9r-Ext" secondAttribute="trailing" id="kXE-eg-TNg"/>
                             <constraint firstItem="4cU-1n-DMF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="134" id="s0i-HO-IoO"/>
@@ -68,7 +83,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="debugTextLabel" destination="Tvf-pb-5CO" id="frA-D7-3s7"/>
                         <outlet property="emailTextField" destination="4cU-1n-DMF" id="lhT-Xs-ujb"/>
+                        <outlet property="loginButton" destination="gxO-B9-OMM" id="8Bf-nq-xpi"/>
                         <outlet property="passwordTextField" destination="7KK-9r-Ext" id="j4Q-An-axH"/>
                     </connections>
                 </viewController>

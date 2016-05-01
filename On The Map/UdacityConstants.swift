@@ -6,13 +6,16 @@
 //  Copyright © 2016 Ashley Donohoe. All rights reserved.
 //
 
+import Foundation
+
 extension UdacityClient {
     
     struct Constants {
-        static let ApiScheme = "https"
-        static let ApiHost = "udacity.com"
-        static let ApiPath = "/api"
-        static let AuthorizationURL: String = "https://www.udacity.com/api/session"
-        static let getUserData = "/users/{userID}"
+        static let BaseAPIURL: String = "https://www.udacity.com/api/"
+    }
+    
+    struct Methods {
+        static let Session = "session"
+        static let Users = "/users/{userID}"
     }
 }
