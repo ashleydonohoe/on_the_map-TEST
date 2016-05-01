@@ -15,6 +15,7 @@
 		E022E6771CC83FCA002D962B /* GCDBlackBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E022E6761CC83FCA002D962B /* GCDBlackBox.swift */; };
 		E04EA4191CD478EB00AA3746 /* UdacityClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EA4181CD478EB00AA3746 /* UdacityClient.swift */; };
 		E04EA41B1CD4825800AA3746 /* UdacityConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EA41A1CD4825800AA3746 /* UdacityConstants.swift */; };
+		E04EA41F1CD5B58C00AA3746 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04EA41E1CD5B58C00AA3746 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E022E6761CC83FCA002D962B /* GCDBlackBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDBlackBox.swift; sourceTree = "<group>"; };
 		E04EA4181CD478EB00AA3746 /* UdacityClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityClient.swift; sourceTree = "<group>"; };
 		E04EA41A1CD4825800AA3746 /* UdacityConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityConstants.swift; sourceTree = "<group>"; };
+		E04EA41E1CD5B58C00AA3746 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		E022E6731CC83F5D002D962B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E04EA41E1CD5B58C00AA3746 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E04EA41F1CD5B58C00AA3746 /* LoginViewController.swift in Sources */,
 				E04EA4191CD478EB00AA3746 /* UdacityClient.swift in Sources */,
 				E04EA41B1CD4825800AA3746 /* UdacityConstants.swift in Sources */,
 				E022E6621CC83ECE002D962B /* ViewController.swift in Sources */,

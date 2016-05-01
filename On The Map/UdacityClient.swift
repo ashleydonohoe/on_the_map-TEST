@@ -19,7 +19,7 @@ class UdacityClient: NSObject {
         super.init()
     }
     
-    
+    /*
     // Get Method
     func taskForGETMethod(method: String, var parameters: [String:AnyObject], completionHandlerForGET: (result: AnyObject!, error: NSError?) -> Void) -> NSURLSessionDataTask {
         
@@ -116,6 +116,7 @@ class UdacityClient: NSObject {
         
         return task
     }
+ */
     
     
 }

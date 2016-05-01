@@ -14,6 +14,5 @@ extension UdacityClient {
         static let ApiPath = "/api"
         static let AuthorizationURL: String = "https://www.udacity.com/api/session"
         static let getUserData = "/users/{userID}"
-        staic let
     }
 }
