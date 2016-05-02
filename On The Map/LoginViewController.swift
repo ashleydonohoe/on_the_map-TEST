@@ -41,6 +41,11 @@ class LoginViewController: UIViewController {
         performSegueWithIdentifier("tabView", sender: self)
     }
 
+    @IBAction func signUp(sender: AnyObject) {
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://www.udacity.com/account/auth#!/signup")!)
+
+        print("Opening Safari")
+    }
 }
 
 extension LoginViewController {

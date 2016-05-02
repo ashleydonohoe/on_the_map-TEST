@@ -64,6 +64,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dhi-su-OQ7">
+                                <rect key="frame" x="132" y="237" width="62" height="30"/>
+                                <color key="backgroundColor" red="0.99685698747634888" green="0.99204963445663452" blue="0.99196189641952515" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="62" id="LTc-dV-47I"/>
+                                </constraints>
+                                <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="slU-aC-sro"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.63642293214797974" green="0.7371363639831543" blue="0.92574089765548706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -74,10 +85,12 @@
                             <constraint firstItem="gxO-B9-OMM" firstAttribute="top" secondItem="EmR-Ve-hC3" secondAttribute="bottom" constant="21" id="Uvz-yr-f32"/>
                             <constraint firstItem="Tvf-pb-5CO" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WVz-Oe-LDv"/>
                             <constraint firstItem="Tvf-pb-5CO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="X4h-Tu-Z92"/>
+                            <constraint firstItem="Dhi-su-OQ7" firstAttribute="baseline" secondItem="gxO-B9-OMM" secondAttribute="baseline" id="bde-Gk-YIG"/>
                             <constraint firstItem="EmR-Ve-hC3" firstAttribute="leading" secondItem="gxO-B9-OMM" secondAttribute="leading" id="eGg-Bx-e5c"/>
                             <constraint firstItem="Tvf-pb-5CO" firstAttribute="top" secondItem="gxO-B9-OMM" secondAttribute="bottom" constant="35" id="h2N-5e-EFo"/>
                             <constraint firstItem="7KK-9r-Ext" firstAttribute="top" secondItem="4cU-1n-DMF" secondAttribute="bottom" constant="8" symbolic="YES" id="hlM-Kx-pmC"/>
                             <constraint firstItem="4cU-1n-DMF" firstAttribute="trailing" secondItem="7KK-9r-Ext" secondAttribute="trailing" id="kXE-eg-TNg"/>
+                            <constraint firstItem="Dhi-su-OQ7" firstAttribute="leading" secondItem="gxO-B9-OMM" secondAttribute="trailing" constant="50" id="nUj-i4-LhZ"/>
                             <constraint firstItem="4cU-1n-DMF" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="134" id="s0i-HO-IoO"/>
                             <constraint firstItem="16A-wo-lYR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wHw-TF-czO"/>
                             <constraint firstItem="16A-wo-lYR" firstAttribute="baseline" secondItem="4cU-1n-DMF" secondAttribute="baseline" id="xOi-aY-rRP"/>
@@ -98,7 +111,7 @@
         <!--Table View-->
         <scene sceneID="WAq-mC-nM2">
             <objects>
-                <viewController id="5ZK-YE-xCs" sceneMemberID="viewController">
+                <viewController id="5ZK-YE-xCs" customClass="TableViewController" customModule="On_The_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0EB-Sr-niQ"/>
                         <viewControllerLayoutGuide type="bottom" id="l3l-VU-Ku6"/>
@@ -107,7 +120,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cwl-k8-Ht3">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cwl-k8-Ht3">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="On The Map" id="j35-X5-Dhn">
@@ -123,10 +136,22 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DfY-gh-sse">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cwl-k8-Ht3" secondAttribute="trailing" id="EjP-oN-bGw"/>
+                            <constraint firstItem="cwl-k8-Ht3" firstAttribute="leading" secondItem="04I-6N-ge3" secondAttribute="leading" id="m6A-pN-V0R"/>
+                            <constraint firstItem="cwl-k8-Ht3" firstAttribute="top" secondItem="0EB-Sr-niQ" secondAttribute="bottom" id="nxa-h3-hTB"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Table View" id="PmE-ih-bwF"/>
+                    <connections>
+                        <outlet property="tableView" destination="DfY-gh-sse" id="oiN-SZ-RK8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tos-70-bPy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -165,7 +190,7 @@
         <!--Map View-->
         <scene sceneID="okn-RF-93w">
             <objects>
-                <viewController title="Map View" id="oJT-mN-BYQ" sceneMemberID="viewController">
+                <viewController title="Map View" id="oJT-mN-BYQ" customClass="MapViewController" customModule="On_The_Map" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R21-lU-n9f"/>
                         <viewControllerLayoutGuide type="bottom" id="1pT-6i-wd9"/>
@@ -174,7 +199,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jd7-fC-8Rs">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="GDH-eu-Nme">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </mapView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jd7-fC-8Rs">
                                 <rect key="frame" x="0.0" y="20" width="600" height="44"/>
                                 <items>
                                     <navigationItem title="On The Map" id="dkp-4d-6yK">
@@ -193,8 +221,20 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration" label="Map View"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Jd7-fC-8Rs" secondAttribute="trailing" id="IkW-uI-XSc"/>
+                            <constraint firstItem="Jd7-fC-8Rs" firstAttribute="top" secondItem="R21-lU-n9f" secondAttribute="bottom" id="M2X-WK-cS7"/>
+                            <constraint firstItem="Jd7-fC-8Rs" firstAttribute="leading" secondItem="UDa-MT-fQr" secondAttribute="leading" id="Nic-zI-YKw"/>
+                            <constraint firstItem="GDH-eu-Nme" firstAttribute="top" secondItem="Jd7-fC-8Rs" secondAttribute="bottom" id="bJ1-uI-rmv"/>
+                            <constraint firstItem="GDH-eu-Nme" firstAttribute="trailing" secondItem="Jd7-fC-8Rs" secondAttribute="trailing" id="dhh-1F-NUL"/>
+                            <constraint firstAttribute="bottom" secondItem="GDH-eu-Nme" secondAttribute="bottom" id="eDH-jw-WTl"/>
+                            <constraint firstItem="GDH-eu-Nme" firstAttribute="leading" secondItem="Jd7-fC-8Rs" secondAttribute="leading" id="liv-kX-m3z"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Map View" id="ukS-pt-FrM"/>
+                    <connections>
+                        <outlet property="mapView" destination="GDH-eu-Nme" id="oHF-Af-SdZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y33-FM-C7F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
