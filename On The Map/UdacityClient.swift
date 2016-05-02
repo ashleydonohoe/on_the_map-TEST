@@ -160,7 +160,7 @@ class UdacityClient: NSObject {
             }
             
             /* GUARD: Was there any data returned? */
-            guard let data = data else {
+            guard let data = data?.subdataWithRange(NSMakeRange(5, data!.length - 5)) else {
                 sendError("No data was returned by the request!")
                 return
             }

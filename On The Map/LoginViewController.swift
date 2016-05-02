@@ -38,6 +38,7 @@ class LoginViewController: UIViewController {
     
     func completeLogin() {
         print("Login completed")
+        performSegueWithIdentifier("tabView", sender: self)
     }
 
 }
