@@ -36,15 +36,22 @@ class LoginViewController: UIViewController {
         }    
     }
     
+    @IBAction func logoutPressed(sender:UIButton) {
+        UdacityClient.sharedInstance().logout { (success, error) in
+            performUIUpdatesOnMain {
+                if (success != nil) {
+                    self.performSegueWithIdentifier("loginScreen", sender: self)
+                }
+            }
+        }
+    }
+    
     func completeLogin() {
-        print("Login completed")
         performSegueWithIdentifier("tabView", sender: self)
     }
 
     @IBAction func signUp(sender: AnyObject) {
         UIApplication.sharedApplication().openURL(NSURL(string: "https://www.udacity.com/account/auth#!/signup")!)
-
-        print("Opening Safari")
     }
 }
 
