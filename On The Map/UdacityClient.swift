@@ -95,14 +95,10 @@ class UdacityClient: NSObject {
             
             self.userID = userID
             
-            print(userID)
-            
-            print(account)
-            print(self.userID)
-            
             
             completionHandlerForLogin(result: true, error: nil)
         }
+        
         task.resume()
         return task
     }
