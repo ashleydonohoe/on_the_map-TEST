@@ -16,6 +16,7 @@ extension ParseClient {
     }
     
     struct JSONResponseKeys {
+        static let results = "results"
         static let objectID = "objectID"
         static let uniqueKey = "uniqueKey"
         static let firstName = "firstName"

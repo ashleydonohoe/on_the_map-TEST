@@ -13,20 +13,21 @@ class ParseClient: NSObject {
     
     var session = NSURLSession.sharedSession()
     
-    var studentLocations = [StudentLocation]()
+    var studentLocations:[StudentLocation]
     
     override init() {
+        studentLocations = [StudentLocation]()
         super.init()
     }
     
-    func getStudentLocations(completionHandlerForGetStudentLocations: (result: AnyObject!, error: String?) -> Void) -> NSURLSessionDataTask {
+    func getStudentLocations(completionHandlerForGetStudentLocations: (result: AnyObject!, error: String?) -> Void) {
         
         // Build request URL
         let request = NSMutableURLRequest(URL: NSURL(string: "https://api.parse.com/1/classes/StudentLocation?limit=100&-updatedAt")!)
         
-        request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-Application-Id")
+        request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-Application-Id")
         
-        request.addValue("QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr", forHTTPHeaderField: "X-Parse-REST-API-Key")
+        request.addValue("QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY", forHTTPHeaderField: "X-Parse-REST-API-Key")
         
         
         let task = session.dataTaskWithRequest(request) { (data, response, error) in
@@ -54,16 +55,20 @@ class ParseClient: NSObject {
             }
             
             // Parse Data
-            var parsedResult: AnyObject!
+            var parsedResult: [String:AnyObject!]
             do {
-                parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+                parsedResult = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as! [String:AnyObject!]
+                let updatedResults = parsedResult["results"]
+                for item in updatedResults {
+                pa
+                }
+                print(updatedResults)
             } catch {
                 print("Failed to convert data")
             }
         }
         
         task.resume()
-        return task
     }
     
     // given raw JSON, return a usable Foundation object

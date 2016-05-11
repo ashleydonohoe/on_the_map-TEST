@@ -16,6 +16,21 @@ class TableViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        ParseClient.sharedInstance().getStudentLocations { (result, error) in
+            if error == nil {
+                if let results = result?.valueForKey(ParseClient.JSONResponseKeys.results) as? [[String : AnyObject]] {
+                    print("HEre are results")
+                    print(results)
+                }
+            }
+        }
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        for location in ParseClient.sharedInstance().studentLocations {
+            print(location)
+        }
     }
 
     override func didReceiveMemoryWarning() {
